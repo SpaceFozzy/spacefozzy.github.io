@@ -1,7 +1,7 @@
 ---
 title: "Illustrating Literature with Open Source Deep Learning Models"
 date: 2025-01-09 17:49:30 +300
-categories: [TOP_CATEGORIE, ]
+categories: [Gen AI Applied]
 tags: [diffusers, transformers, literature, python]     # TAG names should always be lowercase
 ---
 A guide to illustrating stories with generative AI
@@ -17,28 +17,41 @@ The process looks something like this:
 * Acquire access to a graphics card (GPU) and Python
 * Break the story into 100-word chunks
 * Use a  language model to extract a text description of a scene representing the chunk
-* Use that scene as a prompt for an image-to-text diffusion model to generate images 
+* Use that scene as a prompt for a text-to-image diffusion model to generate images 
 * Build the interleaved story and images into an easily-scrollable static website for a modern audience.
 
 ## A Walk-through: HP Lovecraft's "The Colour Out of Space"
 
-I chose H.P. Lovecraft's The Colour Out of Space for my personal example. You can [view the result here](https://spacefozzy.github.io/graphic-novelator/example/pages/1.html). At 12,400 words, the story spans 25 interlinked pages with 5 illustrations each, breaking up the 100 word chunks of the short story nicely. The [full story text](https://www.gutenberg.org/ebooks/68236) was available in on Project Gutenberg as a mere 89kb plain text file and, like the others there, is in the public domain. 
+I chose H.P. Lovecraft's The Colour Out of Space for my personal example. You can [view the result here](https://spacefozzy.github.io/graphic-novelator/example/pages/1.html). At 12,400 words, the story spans 25 interlinked pages with 5 illustrations each, breaking up the 100 word chunks of the short story nicely. The [full story text](https://www.gutenberg.org/ebooks/68236) was available on Project Gutenberg as a mere 89kb plain text file and, like the others there, is in the public domain. 
 
-A single pass took about 1.5 hours to generate locally on my economic Nvidia RTX 3060 GPU . To get the example visuals to the state where I thought it was shareable, I did three full passes, cherry-picked the best generations, then recreated individual images or scene descriptions as needed to get the particularly "stubborn" scenes where I wanted them. All said, it still took about a day to generate and curate the images for the project, and while they aren't perfect, I'm encouraged by the overall result.
+A single pass took about 1.5 hours to generate locally on my economic NVIDIA RTX 3060 GPU . To get the example visuals to the state where I thought it was shareable, I did three full passes, cherry-picked the best generations, then recreated individual images or scene descriptions as needed to get the particularly "stubborn" scenes where I wanted them. All said, it still took about a day to generate and curate the images for the project, and while they aren't perfect, I'm encouraged by the overall result.
 
 ## Accessing a GPU
-Aiming for bite-sized chunks of 100 words does mean a lot of images. A standard 1024 x 1024 DALL-E 3 image costs $0.04 USD from OpenAI at the time of this writing. For the example short story I generated 375+ images (125 images x 3 passes, plus extras where needed). That would be $15+ USD for my example story, all without the freedom to adjust the model. 
-The text and image generation models we need are both deep learning models that require a graphics card (GPU) to perform costly matrix multiplication in decent time.  Google offers a free service called Google Colab where you can access Python notebooks and GPUs for free (though you must pay for priority access). You could run all this in a Google Colab notebook, connecting to Google Drive to read the story text and write the images.
+Aiming for bite-sized chunks of 100 words does mean a lot of images. A standard 1024 x 1024 DALL-E 3 image costs $0.04 USD from OpenAI at the time of this writing. For the example short story I generated 375+ images (125 images x 3 passes, plus extras where needed). That would be $15+ USD for my example story, all without the freedom to adjust the model.
 
-However, I opted to get a GPU and run both models on it locally. After some impatient research, I spent $450 CDN on an Nvidia RTX 3060 with 12GB of VRAM. The card is past its prime, but still well-known because the 12GB is higher than most in its price bracket. All that memory is useful for fitting as much of a model as possible on a card.
+The text and image generation models we need are both deep learning models that require a graphics card (GPU) to perform costly matrix multiplication in decent time.  Google offers a free service called Google Colab where you can access Python notebooks and GPUs for free (though you must pay for priority access). You could run all this in a [Google Colab notebook](https://colab.research.google.com/), [connecting to Google Drive](https://colab.research.google.com/notebooks/io.ipynb#scrollTo=Google_Drive) to read the story text and write the images.
 
-The GPU I chose to start running Llama3 8b Instruct and Stable Diffusion XL locallyIt turns out this was a great purchase for what I wanted. It runs Llama 3 8b Instruct (quantized) and Stable Diffusion XL all fast enough for me. Illustrating a single chunk takes 30s-60s.
-A happily installed GPU.
+However, I opted to get a GPU and run both models on it locally. After some impatient research, I spent $450 CDN on an NVIDIA RTX 3060 with 12GB of VRAM. The card is past its prime, but still well-known because the 12GB is higher than most in its price bracket. All that memory is useful for fitting as much of a model as possible on a card.
+
+![img-description](/assets/img/3060.jpg){: width="640" height="480" }
+_The GPU I chose to start running Llama3 8b Instruct and Stable Diffusion XL locally_
+
+It turns out this was a great purchase for what I wanted. It runs Llama 3 8b Instruct (quantized) and Stable Diffusion XL all fast enough for me. Illustrating a single chunk takes 30s-60s.
+
+![img-description](/assets/img/3060-installed.jpg){: width="640" height="480" }
+_A happily installed GPU._
 
 ## The Intuition
 At a high level, my approach to the process works like this: an arbitrary text file is loaded into memory and is broken up into chunks of 100 words, all in a Python list.
-The story text is broken into chunks of 100 words.Each Chunk tracks its own story text, scene description and image using the local file system. They also expose functions to generate any of those properties that are missing.
-Each Chunk of the story tracks its text, scene description, and image.
+
+![img-description](/assets/img/intuition-1.png){: width="550" height="207" }
+_The story text is broken into chunks of 100 words._
+
+The story text is broken into chunks of 100 words.Each `Chunk` tracks its own story text, scene description and image using the local file system. They also expose functions to generate any of those properties that are missing.
+Each `Chunk` of the story tracks its text, scene description, and image.
+
+![img-description](/assets/img/intuition-2.png){: width="550" height="294" }
+_Each Chunk of the story tracks its text, scene description, and image._
 
 ## The Models
 One of the advantages of running local models is selecting them according to your preference. I used Hugging Face (a renowned model hub and Python library) to download and run inference on the models.
