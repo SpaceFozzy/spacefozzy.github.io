@@ -1,5 +1,5 @@
 ---
-title: "Illustrating Literature with Open Source Deep Learning Models"
+title: "Visualizing Literature With Open-Source Deep Learning Models"
 date: 2025-01-09 17:49:30 +300
 categories: [Applied Gen AI]
 tags: [diffusers, transformers, literature, python]     # TAG names should always be lowercase
@@ -11,7 +11,7 @@ With some Python and a CUDA-enabled GPU, one person can now illustrate their fav
 ![A generated image of a colorful orb](/assets/img/22.png){: width="640" height="640" }
 _"there was much breathless talk of new elements, bizarre optical properties, and other things which puzzled men of science are wont to say when faced by the unknown"_
 
-The opportunity here at the intersection of deep learning and art is broadly felt. There are many projects currently under active development applying language models to interactive fiction while character consistency remains a coveted achievement in recent research  and diffusion communities. Yet the application of machine learning to the humanistic domain of art is a highly-charged subject. We've been blindsided by algorithms that can illustrate and write before fully automating the mundane parts of our lives, with the outrageous twist that their fuel is our own unattributed creative output.
+The opportunity here at the intersection of deep learning and art is broadly felt. There are many projects currently under active development applying language models to interactive fiction while character consistency remains a coveted achievement in recent research  and diffusion communities. Yet the application of machine learning to the humanistic domain of art is a highly-charged subject. We've been surprised by algorithms that can illustrate and write before fully automating the mundane parts of our lives, with the outrageous twist that their fuel is our own unattributed creative output.
 
 Yet, with that acknowledged, a proliferation of art where none would have otherwise been would be, in my opinion, an undeniable good. To that end, this article is a guide to illustrating stories with digital media in a way that wasn't technically possible five years ago.
 
