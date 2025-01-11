@@ -4,14 +4,14 @@ date: 2025-01-09 17:49:30 +300
 categories: [Applied Gen AI]
 tags: [diffusers, transformers, literature, python]     # TAG names should always be lowercase
 ---
-A guide to illustrating stories with generative AI
+A Practical Guide to the Recently Impossible
 ---
-With some Python and a CUDA-enabled GPU, one person can now illustrate their favourite public domain lit with remarkable visual density. They will have to manage certain inconsistencies in characters and setting (a limitation of the current technology), but with recent advances in transformer and diffusion models the capacity for one person to create digital media is rapidly increasing. 
+With some Python and a CUDA-enabled graphics card, one person can now illustrate their favourite public domain lit with remarkable visual richness. They will have to manage certain inconsistencies in characters and setting (a limitation of the current technology), but with recent advances in transformer and diffusion models the capacity for one person to create digital media is rapidly increasing. 
 
 ![A generated image of a colorful orb](/assets/img/22.png){: width="640" height="640" }
 _"there was much breathless talk of new elements, bizarre optical properties, and other things which puzzled men of science are wont to say when faced by the unknown"_
 
-The opportunity here at the intersection of deep learning and art is broadly felt. There are many projects currently under active development applying language models to interactive fiction while character consistency remains a coveted achievement in recent research  and diffusion communities. Yet the application of machine learning to the humanistic domain of art is a highly-charged subject. We've been surprised by algorithms that can illustrate and write before fully automating the mundane parts of our lives, with the outrageous twist that their fuel is our own unattributed creative output.
+The opportunity here at the intersection of deep learning and art is broadly felt. There are many projects currently under active development applying language models to interactive fiction, while character consistency remains a coveted achievement in recent research and diffusion communities. Yet the application of machine learning to the humanistic domain of art is a highly-charged subject. We've been surprised by algorithms that can illustrate and write before fully automating the mundane parts of our lives, with the outrageous twist that their fuel is our own unattributed creative output.
 
 Yet, with that acknowledged, a proliferation of art where none would have otherwise been would be, in my opinion, an undeniable good. To that end, this article is a guide to illustrating stories with digital media in a way that wasn't technically possible five years ago.
 
@@ -57,8 +57,7 @@ At a high level, my approach to the process works like this: an arbitrary text f
 ![A diagram of the story being broken up into a list of chunks](/assets/img/intuition-1.png){: width="550" height="207" }
 _The story text is broken into chunks of 100 words._
 
-The story text is broken into chunks of 100 words.Each `Chunk` tracks its own story text, scene description and image using the local file system. They also expose functions to generate any of those properties that are missing.
-Each `Chunk` of the story tracks its text, scene description, and image.
+The story text is broken into chunks of 100 words. Each `Chunk` tracks its own story text, scene description and image using the local file system. They also expose functions to generate any of those properties that are missing. Each `Chunk` of the story tracks its text, scene description, and image.
 
 ![A diagram of the process of turning a chunk into an image by generating a scene description, then an image based on it](/assets/img/intuition-2.png){: width="550" height="294" }
 _Each Chunk of the story tracks its text, scene description, and image._
@@ -116,7 +115,7 @@ _"unknown and unholy iridescence from the slimy depths in front"_
 
 ### Character Consistency
 
-A well-known shortcoming of the current state of image generation is the struggle for consistency in characters between images (and now video). It's a  stubborn problem that is currently a focus among AI content creation communities. While diffusion models can be fined-tuned on faces and characters, the fine details of clothing are not so easily controlled from one image to the next. Consistent faces are relatively achievable, but collars disappear, buttons re-align, and pockets run amok, requiring the attention of a capable digital artist to bring them into harmony. The progress here has been interesting to follow:
+A well-known shortcoming of the current state of image generation is the struggle for consistency in characters between images (and now video). It's a  stubborn problem that is currently a focus among AI content creation communities. While diffusion models can be fined-tuned on faces and characters, the fine details of clothing are not so easily controlled from one image to the next. Consistent faces are relatively achievable, but collars disappear, buttons re-align, and pockets run amok, requiring the attention of a capable digital artist to bring them into harmony. The progress here towards better "personalization" has been interesting to follow:
 
 * [Textual Inversions](https://arxiv.org/pdf/2208.01618), given a few images, will find an embedding that represents them and provide you with a new token for that embedding to be used in your prompts, evoking that concept in future generations.
 
@@ -138,7 +137,7 @@ In my experience fine-tuning  results in small but noticeable inconsistencies, w
 ### Story Consistency
 
 Unless your story fits entirely within the context window of the language model extracting the scene descriptions, the story must be chunked into pages to be illustrated. However, at the time the scene descriptions are extracted, the model is blind to anything beyond the current chunk. So, a character who entered the room in a previous chunk, but is not mentioned in the current chunk, would not be captured in the resulting illustration.
-Characters, objects, and settings are often described when they are introduced, but may simply exist by name in most chunks. This can give rise to various continuity errors.
+Moreover, characters, objects, and settings are often described when they are introduced, but are probably just referred to in subsequent chunks. This can give rise to various continuity errors.
 
 ![A generated image of a murky landscape with misshapen skulls sunk in it](/assets/img/87.png){: width="640" height="640" }
 _"though the vestiges were mainly skeletal"_
