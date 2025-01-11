@@ -137,11 +137,18 @@ In my experience fine-tuning  results in small but noticeable inconsistencies, w
 
 ### Story Consistency
 
-Unless your story fits entirely within the context window of the language model extracting the scene descriptions, the story must be chunked into pages to be illustrated. However, at the time the scene descriptions are extracted, the model is blind to anything beyond the current chunk. So, a character who entered the room in a previous chunk, but is not mentioned in the current chunk, would not be captured in the resulting illustration. This can give rise to various continuity errors.
+Unless your story fits entirely within the context window of the language model extracting the scene descriptions, the story must be chunked into pages to be illustrated. However, at the time the scene descriptions are extracted, the model is blind to anything beyond the current chunk. So, a character who entered the room in a previous chunk, but is not mentioned in the current chunk, would not be captured in the resulting illustration.
+Characters, objects, and settings are often described when they are introduced, but may simply exist by name in most chunks. This can give rise to various continuity errors.
+
+![img-description](/assets/img/87.png){: width="640" height="640" }
+_"though the vestiges were mainly skeletal"_
 
 Similarly, story elements may be referenced in a way where more context is needed beyond the current chunk to understand exactly what is going on.  For example, finding the phrase "… as he transformed into a bat!" at the beginning of a chunk would leave the language model unable to know who exactly underwent the transformation. This is known as "coreference resolution" in natural language processing, and is one of the challenges in rendering stories in this chunked, linear fashion.
 
-As a concrete example, I had a silly time attempting Mary Shelley's Frankenstein, where the antagonist is often just referred to as the creature. This sent me down a rabbit hole of considering how to resolve these references, but also how to track character details (and their evolutions) as a story progresses just for more accurate images.
+As a concrete example, I had a comical time attempting Mary Shelley's Frankenstein, where the antagonist is often just referred to as "the creature". This sent me down a rabbit hole of considering how to resolve these references, but also how to track character details (and their evolutions) as a story progresses just for more accurate images.
 
 ### Detail Accuracy
 Faces, hands and "fidgety little things" (like pouches on belts) can be notoriously mangled by image models. There are specific "detailers" that will identify faces, redraw them enlarged, then scale them back down and stitch them into the original image with surprisingly good results. However, those workflows come with a more complex configuration. ComfyUI and its thriving community support a whole universe of workflows for more control over the images you generate. Model selection can also make a big difference here. "Inpainting" is also a technique that allows to you regenerate specific parts of an image, but resists automation. Though, with the current state of things, you should expect to be  cherry-pick the best images, or spending some time touching them up.
+
+![img-description](/assets/img/21.png){: width="640" height="640" }
+_"It had acted quite unbelievably in that well-ordered laboratory..."_
