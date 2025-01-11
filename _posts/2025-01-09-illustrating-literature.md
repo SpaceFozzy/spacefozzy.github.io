@@ -8,7 +8,7 @@ A guide to illustrating stories with generative AI
 ---
 With some Python and a CUDA-enabled GPU, one person can now illustrate their favourite public domain lit with remarkable visual density. They will have to manage certain inconsistencies in characters and setting (a limitation of the current technology), but with recent advances in transformer and diffusion models the capacity for one person to create digital media is rapidly increasing. 
 
-![img-description](/assets/img/22.png){: width="640" height="640" }
+![A generated image of a colorful orb](/assets/img/22.png){: width="640" height="640" }
 _"there was much breathless talk of new elements, bizarre optical properties, and other things which puzzled men of science are wont to say when faced by the unknown"_
 
 The opportunity here at the intersection of deep learning and art is broadly felt. There are many projects currently under active development applying language models to interactive fiction while character consistency remains a coveted achievement in recent research  and diffusion communities. Yet the application of machine learning to the humanistic domain of art is a highly-charged subject. We've been blindsided by algorithms that can illustrate and write before fully automating the mundane parts of our lives, with the outrageous twist that their fuel is our own unattributed creative output.
@@ -23,7 +23,7 @@ The process looks something like this:
 * Use that scene as a prompt for a text-to-image diffusion model to generate images 
 * Build the interleaved story and images into an easily-scrollable static website for a modern audience.
 
-![img-description](/assets/img/30.png){: width="640" height="640" }
+![An abstract generated image of a door in a swirling cosmic passage](/assets/img/30.png){: width="640" height="640" }
 _"they had indeed seen with waking eyes that cryptic vestige of the fathomless gulfs outside; that lone, weird message from other universes and other realms of matter, force, and entity"_
 
 
@@ -33,7 +33,7 @@ I chose H.P. Lovecraft's The Colour Out of Space for my personal example. You ca
 
 A single pass took about 1.5 hours to generate locally on my economic NVIDIA RTX 3060 GPU . To get the example visuals to the state where I thought it was shareable, I did three full passes, cherry-picked the best generations, then recreated individual images or scene descriptions as needed to get the particularly "stubborn" scenes where I wanted them. All said, it still took about a day to generate and curate the images for the project, and while they aren't perfect, I'm encouraged by the overall result.
 
-![img-description](/assets/img/100.png){: width="640" height="640" }
+![A generated image of orbs in a night sky over treetops and houses](/assets/img/100.png){: width="640" height="640" }
 _"a thousand tiny points of faint and unhallowed radiance, tipping each bough like the fire of St. Elmo"_
 
 ## Accessing a GPU
@@ -43,24 +43,24 @@ The text and image generation models we need are both deep learning models that 
 
 However, I opted to get a GPU and run both models on it locally. After some impatient research, I spent $450 CDN on an NVIDIA RTX 3060 with 12GB of VRAM. The card is past its prime, but still well-known because the 12GB is higher than most in its price bracket. All that memory is useful for fitting as much of a model as possible on a card.
 
-![img-description](/assets/img/3060.jpg){: width="640" height="480" }
+![An image of the NVIDIA RTX 3060 box](/assets/img/3060.jpg){: width="640" height="480" }
 _The GPU I chose to start running Llama3 8b Instruct and Stable Diffusion XL locally_
 
 It turns out this was a great purchase for what I wanted. It runs Llama 3 8b Instruct (quantized) and Stable Diffusion XL all fast enough for me. Illustrating a single chunk takes 30s-60s.
 
-![img-description](/assets/img/3060-installed.jpg){: width="640" height="480" }
+![An image of the NVIDIA RTX 3060 installed in a PC](/assets/img/3060-installed.jpg){: width="640" height="480" }
 _A happily installed GPU._
 
 ## The Intuition
 At a high level, my approach to the process works like this: an arbitrary text file is loaded into memory and is broken up into chunks of 100 words, all in a Python list.
 
-![img-description](/assets/img/intuition-1.png){: width="550" height="207" }
+![A diagram of the story being broken up into a list of chunks](/assets/img/intuition-1.png){: width="550" height="207" }
 _The story text is broken into chunks of 100 words._
 
 The story text is broken into chunks of 100 words.Each `Chunk` tracks its own story text, scene description and image using the local file system. They also expose functions to generate any of those properties that are missing.
 Each `Chunk` of the story tracks its text, scene description, and image.
 
-![img-description](/assets/img/intuition-2.png){: width="550" height="294" }
+![A diagram of the process of turning a chunk into an image by generating a scene description, then an image based on it](/assets/img/intuition-2.png){: width="550" height="294" }
 _Each Chunk of the story tracks its text, scene description, and image._
 
 ## The Models
@@ -77,7 +77,7 @@ Since the time of writing this, new models in both the Stable Diffusion and Llam
 
 For the purposes of this article, Llama 3 and SDXL will do just fine.
 
-![img-description](/assets/img/17.png){: width="640" height="640" }
+![A generated image of an archway on a vast plain under a red sun. A figure in a red robe stands under it. ](/assets/img/17.png){: width="640" height="640" }
 _"not feared half so much as the small island in the Miskatonic where the devil held court beside a curious stone altar"_
 
 ## The Code
@@ -109,7 +109,7 @@ python3 app/start.py
 
 And finally, you can pass a chunk number to force a chunk (and only that chunk) to be regenerated. i.e. if you notice the image for chunk 7 doesn't work, you can run `python3 app/start.py 7` to regenerate both the description and image.
 
-![img-description](/assets/img/96.png){: width="640" height="640" }
+![A generated image of an iridescent forest](/assets/img/96.png){: width="640" height="640" }
 _"unknown and unholy iridescence from the slimy depths in front"_
 
 ## Limitations
@@ -125,7 +125,7 @@ A well-known shortcoming of the current state of image generation is the struggl
 * [IP Adapter](https://arxiv.org/pdf/2308.06721) modifies the diffusion model's cross-attention to take an image prompt in addition to a text prompt. Many online guides show how to combine IP Adapter with masking and ControlNet to consistently render outfits on models (mostly for fashion applications).
 
 
-![img-description](/assets/img/63.png){: width="640" height="640" }
+![A generated image of a terrified man with gray hair](/assets/img/63.png){: width="640" height="640" }
 _"Three days later Nahum burst into Ammi's kitchen in the early morning, and in the absence of his host stammered out a desperate tale once more"_
 Innovation in this area is active. A couple new approaches I've recently tried: 
 
@@ -140,7 +140,7 @@ In my experience fine-tuning  results in small but noticeable inconsistencies, w
 Unless your story fits entirely within the context window of the language model extracting the scene descriptions, the story must be chunked into pages to be illustrated. However, at the time the scene descriptions are extracted, the model is blind to anything beyond the current chunk. So, a character who entered the room in a previous chunk, but is not mentioned in the current chunk, would not be captured in the resulting illustration.
 Characters, objects, and settings are often described when they are introduced, but may simply exist by name in most chunks. This can give rise to various continuity errors.
 
-![img-description](/assets/img/87.png){: width="640" height="640" }
+![A generated image of a murky landscape with misshapen skulls sunk in it](/assets/img/87.png){: width="640" height="640" }
 _"though the vestiges were mainly skeletal"_
 
 Similarly, story elements may be referenced in a way where more context is needed beyond the current chunk to understand exactly what is going on.  For example, finding the phrase "… as he transformed into a bat!" at the beginning of a chunk would leave the language model unable to know who exactly underwent the transformation. This is known as "coreference resolution" in natural language processing, and is one of the challenges in rendering stories in this chunked, linear fashion.
@@ -150,5 +150,5 @@ As a concrete example, I had a comical time attempting Mary Shelley's Frankenste
 ### Detail Accuracy
 Faces, hands and "fidgety little things" (like pouches on belts) can be notoriously mangled by image models. There are specific "detailers" that will identify faces, redraw them enlarged, then scale them back down and stitch them into the original image with surprisingly good results. However, those workflows come with a more complex configuration. ComfyUI and its thriving community support a whole universe of workflows for more control over the images you generate. Model selection can also make a big difference here. "Inpainting" is also a technique that allows to you regenerate specific parts of an image, but resists automation. Though, with the current state of things, you should expect to be  cherry-pick the best images, or spending some time touching them up.
 
-![img-description](/assets/img/21.png){: width="640" height="640" }
+![A generated image of a scientist in a lab with poor face and hand details](/assets/img/21.png){: width="640" height="640" }
 _"It had acted quite unbelievably in that well-ordered laboratory..."_
