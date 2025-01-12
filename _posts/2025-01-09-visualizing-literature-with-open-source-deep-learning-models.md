@@ -1,7 +1,7 @@
 ---
 title: "Visualizing Literature With Open-Source Deep Learning Models"
 date: 2025-01-09 17:49:30 +300
-categories: [Applied Gen AI]
+categories: [Fun With Deep Learning]
 tags: [diffusers, transformers, literature, python]     # TAG names should always be lowercase
 ---
 A Practical Guide to the Recently Impossible
