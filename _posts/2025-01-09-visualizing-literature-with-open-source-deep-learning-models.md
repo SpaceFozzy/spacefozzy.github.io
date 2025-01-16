@@ -148,3 +148,10 @@ Faces, hands and "fidgety little things" (like pouches on belts) can be notoriou
 
 ![A generated image of a scientist in a lab with poor face and hand details](/assets/img/21.png){: width="640" height="640" }
 _"It had acted quite unbelievably in that well-ordered laboratory..."_
+
+## Conclusion
+So, is it useful yet? Absolutely. While its original name—“graphic novelator”—suggests an end-to-end comic creation tool, this project is far more suited to weaving illustrations into stories, rather than single-handedly producing a passable graphic novel. That’s why I consider it less of a “graphic novelator” and more of a “story-illustrator.” But that's okay. Growing up, many of the illustrated books I loved focused on setting and atmosphere instead of characters, and that is precisely where the tools currently shine. Yes, image models struggle with continuity, but they excel at evoking mood and conveying vivid worlds.
+
+By combining public domain literature with open-source technology, the project extends a tradition of remixing shared art. There is the possibility for a sudden creative expansion: using a freely available cultural foundation to spark new experiences for everyone. The constraints preserve the heart of the text while still delivering imaginative visuals—a frame of deep-learning around a familiar story. 
+
+Time to build something with it.
