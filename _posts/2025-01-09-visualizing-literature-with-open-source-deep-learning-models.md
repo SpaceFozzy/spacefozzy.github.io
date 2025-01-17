@@ -148,3 +148,10 @@ Faces, hands and "fidgety little things" (like pouches on belts) can be notoriou
 
 ![A generated image of a scientist in a lab with poor face and hand details](/assets/img/21.png){: width="640" height="640" }
 _"It had acted quite unbelievably in that well-ordered laboratory..."_
+
+## Conclusion
+So, is it useful yet? Absolutely -- with some imagination. However, the “the graphic novelator” is a misnomer. Given the limitations, it's far more effective at weaving illustrations into stories as opposed to producing a passable graphic novel. But that's okay. Growing up, many of the illustrations in books I loved focused on the setting and atmosphere over the characters themselves, and that is precisely where the tools currently shine. Yes, image models struggle with continuity, but they excel at evoking mood and conveying vivid worlds.
+
+By combining public domain literature with open-source deep learning models, we can extend a tradition of remixing shared art. Retelling classic works like Shakespeare in modern contexts is already a part of their legacy. This new technology offers a new avenue for creative expansion: using a freely available cultural foundation to spark new experiences for everyone. There is also something fitting about the current limitations in that they preserve the focus on the text while still delivering imaginative visuals, leaving the technology as a frame around a familiar story.
+
+The only question is what to build with it.
