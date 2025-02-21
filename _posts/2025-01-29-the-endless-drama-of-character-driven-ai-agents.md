@@ -6,6 +6,8 @@ tags: [agents, transformers, python, literature]     # TAG names should always b
 ---
 Agentic Systems Just Trying To Be Themselves
 ---
+_Hats off to [Erik Krieg](https://github.com/erikkrieg) for the glorious discussions and hacking sessions that were the origins of this post._
+
 So here we are in a world where computer programs can start to make “decisions” for themselves about which code to run based on probabilistic language models and the goal in their prompt. With the advent of reasoning models (o1, o3, deepseek r1), they are about to get a lot better at it too. They are agents: one thousand PhDs in a box ready to execute your mission, boost your productivity, and dance on the weeping masses of obsolete software developers. There is important work to be done here -- an arms race to win, medicine to discover, worlds to create.
 
 Worlds to create?
@@ -62,7 +64,7 @@ self.characters = [
 ```
 Why is this important?
 
-Well, of all the things we can build, the novel, relatable, characterizing moments that make compelling stories are the most subjective and nuanced. Until now, we haven't had the technology to convincingly emulate the behaviour of one person (let alone several). This will power new types of games and simulations. It surely powers botnets that skew social media for political and commercial gain. It underlies a nacent industry of human "companionship" technology. So this is fresh ground, with much bigger implications than our fun little example.
+Well, of all the things we can build, the novel, relatable, characterizing moments that make compelling stories are the most subjective and nuanced. Until now, we haven't had the technology to "convincingly" emulate the behaviour of one person (let alone several). This will power new types of games and simulations. It surely powers botnets that skew social media for political and commercial gain. It underlies a nacent industry of human "companionship" technology. So this is fresh ground, with much bigger implications than our fun little example.
 
 ## Our Fun Little Example
 To build our agents we want to put the LLM at the center of the control flow of our application. First, let's understand how the LLM is going to take an action in our simulation. Being a social simulation in a bar, our agents will need coded actions that to allow them to "talk", "move", "emote" and "plan".
@@ -98,7 +100,7 @@ An agent acts via _tool use_ (aka _function calling_). Some LLMs are fine-tuned 
 ```
 This is a key part of agentic systems: they can perform actions to update their available context, nudging it towards their goal until it is achieved. [ReAct](https://arxiv.org/abs/2210.03629) is a simple early pattern for agents that illustrates the concept: observe the environment, reason about what to do given your goal, then pick an action to close the gap. Repeat.
 
-In fact, there are ecosystems and frameworks for managing the flow and state of complex agents, but this concept of function calling is all you need to get started. For this project, function calling is enough.
+In fact, there are [libraries](https://github.com/huggingface/smolagents) and [frameworks](https://www.langchain.com/langgraph) for managing the flow and state of complex agents, but this concept of function calling is all you need to get started. For this project, function calling is enough.
 
 So, we can prompt an LLM with instructions to take the role of a character, describe that character’s current environment, then give it a platter of tools from which it can select an action, and run that in a loop with many other such agents.
 
@@ -248,8 +250,6 @@ What the hell, Bob? Okay -- in his defense, I did give him the personality of a 
 
 Bob's looping was notable because the ReAct paper actually found a "frequent error pattern specific to ReAct, in which the model repetitively generates the previous thoughts and actions, and we categorize it as part of “reasoning error” as the model fails to reason about what the proper next action to take and jump out of the loop." So that looping is actually consistent.
 
-Tweaking the prompt to specifically avoid repetition helped a little.
-
 The next surprising moment came when Alice rallied the group and got them all working together.
 
 ### Emergent Teamwork
@@ -309,9 +309,9 @@ Charlie the bartender: polish a glass with a white towel while maintaining eye c
 Diana: excuse myself from the high1 table, allowing Alice to continue discussing with Charlie
 ```
 
-I was so happy for the four of them. They were really getting along!
+The four of them were really getting along!
 
-But I also needed to know how they would react to danger -- to sudden, unexpected changes in the environment. 
+But how would they react to danger? What about sudden, unexpected changes in the environment?
 
 ### Calm Under Pressure
 ```
@@ -337,7 +337,15 @@ Charlie the bartender says at bar to Alice: Hey Alice, I really appreciate your 
 Diana: rush to high1 to help Charlie, who was just mauled by a bear
 ```
 
-So resilient! Another funny moment:
+Really?
+
+```
+Alice: stand up and try to distract the bear
+Bob: take a sip of my drink while observing the scene
+```
+This is classic Bob.
+
+Another memorable moment:
 
 ```
 Turn 2
@@ -347,13 +355,6 @@ Bob loudly says at booth1 to Alice: Hey, have you given any thought to what we s
 Charlie the bartender loudly says at bar to group: Everyone, let's stay calm. We need to figure out a plan to safely handle this bear. Has anyone thought of calling wildlife experts or trying to escort it outside?
 Diana: stand up and quickly move towards the door, looking worried
 ```
-Gosh, don't they always want to work together.
-
-```
-Alice: stand up and try to distract the bear
-Bob: take a sip of my drink while observing the scene
-```
-This is classic Bob.
 
 ## Lessons Learned
 
