@@ -369,3 +369,21 @@ The LLM must correctly reason about the priority (and potentially the timing) of
 
 ### They Can Surprise
 It didn't take very long before I saw interesting dynamics between the agents that caused me surprise and delight. Novelty emerged from the chaos before my eyes. That alone has already made the project successful in my eyes. Though, I suppose it has yet to be seen if they an impress beyond the realm of [disjointed comedy](https://en.wikipedia.org/wiki/Nothing,_Forever). Or maybe that's enough...
+
+## Upgrading Your Character
+
+It was very easy to compare the agents when running against a much larger model, as well.
+
+| Llama 3.1 8b Instruct | OpenAI GPT-4o |
+| :--------------- | :------ |
+| Alice: smiling at Diana | Alice moves from a high top near the bar <br>to a long oak bar with many stools |
+| Bob: take a seat and observe the patrons of the bar, <br>smiling quietly to myself|  Bob: sips drink slowly while glancing<br>occasionally toward the bar where Alice<br>and Charlie are, then over to Diana's booth,<br>maintaining a quiet demeanor|
+| Charlie the bartender: pouring a drink with flair |   Charlie the bartender says at bar to Alice:<br>Welcome to the bar, Alice! How's your day<br>going? Can I get you something to drink? |
+| Diana: Compliment Charlie's bartending skills |Diana moves from a booth near a busy<br>window to a private corner booth|
+|Alice says at high1 to Diana: I've been noticing<br>you're a big fan of Charlie's bartending skills.<br>What do you like about them?| Alice says at bar to Charlie: Thanks, Charlie!<br>My day's been pretty good, just settling<br>into the area. I'll have a craft beer if you've<br>got something local. By the way, I'm in tech,<br>so I'm curious if there are any gadgets or<br>tech solutions that would make things easier<br>around here for folks like you?|
+|Bob says at booth1 to Charlie the bartender: I'd<br>like to order a drink, please.|Bob says at booth1 to Diana: Hi Diana, how’s<br>your evening going? Just here for a quiet<br>night myself.|
+|Charlie the bartender: I give Bob a friendly smile<br>as I finish pouring his drink.|Charlie the bartender says at bar to Alice:<br>Here's our finest local craft beer, Alice! As for<br>tech solutions, some bars are using tablet<br>systems to streamline orders and payments,<br>which could make service faster and easier.<br>Do you have any specific gadget in mind?|
+|Diana says at booth2 to Alice: I'm a big fan of<br>Charlie's bartending skills because I appreciate<br>the attention to detail and creativity he puts<br>into each drink. His flair for the dramatic is<br>also quite entertaining.|Diana says at booth1 to Bob: Hey Bob, my<br>evening is going alright. I've actually been<br>diving deep into this fascinating academic<br>paper about cognitive science, linking<br>creativity to neural networks. It's been pretty<br>mind-blowing! What about you? Any<br>interesting projects or hobbies keeping you<br>busy these days?|
+|Alice: leaning in, smiling at Diana| Alice says at bar to Charlie: Thanks for the<br>craft beer, Charlie, it tastes great! As for tech<br>solutions, besides tablets, do you think there<br>could be other innovations or services that<br>would enhance the experience for you and<br>the customers here? I'm always curious<br>about how technology can improve everyday<br>places like this.|
+
+Anecdotally, the larger GPT-4o is more descriptive, outputs more convincing dialogue, and has more complex interplay between the characters. Notice that Alice orders a drink, Charlie makes a recommendation and gives it to her, then she thanks him and comments on its taste!
