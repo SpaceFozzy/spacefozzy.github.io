@@ -186,63 +186,111 @@ Now we can run multiple characters in a loop, letting their personality profiles
 ### Meet Bob
 ```
 Turn 1
+
 Alice moves from a high top near the bar to a long oak bar with many stools
+
 Bob: people watch from booth1 without drawing attention
+
 Charlie says at bar: Hey Alice! What can I get for you today?
+
 Diana: order a quiet drink, such as a coffee
+
 
 Turn 2
 Alice says at bar: It was nice meeting you Charlie! I just moved here and I don’t know anyone else yet.
+
 Bob: people watch from booth1 without drawing attention
+
 Charlie loudly says at bar: Welcome to our bar, Alice! How's your first day been so far?
+
 Diana moves from a booth near a busy window to a high top near the television
 
+
 Turn 3
+
 Alice says at bar: So Charlie, what are some of your favorite spots to check out around town?
+
 Bob: approach Alice at the bar
+
 Charlie says at bar: I've got a few recommendations for you, Alice. There's a great coffee shop near here that's perfect for a morning pick-me-up.
+
 Diana moves from a high top near the television to a long oak bar with many stools
 
+
 Turn 4
+
 Alice moves from a long oak bar with many stools to a private corner booth
+
 Bob: stare at Alice with interest
+
 Charlie loudly says at bar: Can I get you another drink, Diana?
+
 Diana says at bar: Thank you, Charlie. A drink sounds lovely.
 
+
 Turn 5
+
 Alice says at booth1: Thanks, Charlie, but I think I’ll pass on another drink for now. Bob, what do you like to do for fun?
+
 Bob: stare at Alice with interest
+
 Charlie: ask Bob about his hobbies and interests while offering Diana another drink
+
 Diana: sit down at the bar with a contented sigh
 
+
 Turn 6
+
 Alice loudly says at booth1: Hey Bob, I noticed you were interested in getting to know me. Would you like to grab coffee sometime this week?
+
 Bob: stare at Alice with interest
+
 Charlie: leaning towards booth1, still mixing drink for Diana
+
 Diana: take a sip of your drink, then lean back in your stool, reflecting on your personality traits
 
+
 Turn 7
+
 Alice: take out phone to check for local coffee shops
+
 Bob: stare at Alice with interest
+
 Charlie: walk towards booth1, interest shown on face
+
 Diana moves from a long oak bar with many stools to a booth near a busy window
 
+
 Turn 8
+
 Alice: take out phone to check for local coffee shops
+
 Bob: stare at Alice with interest
+
 Charlie: winking at Bob as you walk towards booth1
+
 Diana: pouring a cup of coffee
 
+
 Turn 9
+
 Alice says at booth1: That sounds amazing, Bob! How about we grab coffee at 2 PM on Wednesday at The Daily Grind?
+
 Bob: Make eye contact with Charlie as he walks towards booth1, then lean in to ask him about his interests or hobbies
+
 Charlie says at bar: Hey Bob, I'm glad you're making plans with Alice. What do you like to do for fun?
+
 Diana moves from a booth near a busy window to a long oak bar with many stools
 
+
 Turn 10
+
 Alice: lean in to ask Bob about his interests or hobbies
+
 Bob: make eye contact with Charlie as he walks towards booth1, then lean in to ask him about his interests or hobbies
+
 Charlie moves from a long oak bar with many stools to a private corner booth
+
 Diana moves from a long oak bar with many stools to a private corner booth
 ```
 
@@ -255,57 +303,101 @@ The next surprising moment came when Alice rallied the group and got them all wo
 ### Emergent Teamwork
 ```
 Turn 1
+
 Alice loudly says at high1 to Charlie: Hi Charlie, I'm Alice. I just moved to the area and I was wondering if you could tell me a bit about the local tech scene?
+
 Bob: observing from across the room without drawing attention to myself
+
 Charlie the bartender: smiling and pouring drinks efficiently as you chat with Alice at high1
+
 Diana: I stand up from booth2 and wave at Alice to signal my interest in joining her conversation
 
+
 Turn 2
+
 Alice: waving back at Diana to signal that I'm interested in talking to her
+
 Bob: I approach Alice at high1 and try to strike up a conversation about her interests in the local tech scene
+
 Charlie the bartender: pouring a drink efficiently as you chat with Alice
+
 Diana moves from a booth near a busy window to a high top near the bar
 
+
 Turn 3
+
 Alice: excuse myself from conversation to speak with Diana
+
 Bob: leaning against the wall near booth1, quietly observing Alice and Diana's conversation
+
 Charlie the bartender: pouring a drink efficiently while continuing to chat with Alice, occasionally casting a glance at Bob to make sure he doesn't feel neglected
+
 Diana: excusing herself from the conversation with Alice to suggest grabbing a drink together
 
+
 Turn 4
+
 Alice: order a drink from Charlie at the bar to join Diana
+
 Bob: approach high1 to strike up conversation with Alice
+
 Charlie the bartender: pouring a drink efficiently while continuing to chat with Alice, occasionally casting a glance at Bob
+
 Diana: take a sip of her drink, seemingly lost in thought
 
+
 Turn 5
+
 Alice: excusing myself from conversation with Diana
+
 Bob: approach Diana at high1, interested in joining her conversation with Alice
+
 Charlie the bartender: pouring a drink with a smile, while continuing to chat with Alice at high1
+
 Diana: take out notes to prepare for conversation about local tech scene
 
+
 Turn 6
+
 Alice loudly says at high1 to Diana: Diana, I was thinking maybe we could brainstorm some ideas for local tech startups. What do you think?
+
 Bob: approach Diana at high1 to continue our conversation about her interests in the local tech scene
+
 Charlie the bartender: continue serving drinks while engaging in conversation with Alice at high1
+
 Diana: pull out notes to brainstorm ideas for local tech startups
 
+
 Turn 7
+
 Alice: pull out a laptop to start taking notes on Diana
+
 Bob: pull out notes to brainstorm ideas for local tech startups
+
 Charlie the bartender says at bar to Alice: Hey Alice, I'm loving the vibe at the bar tonight. How's your brainstorming session with Diana going?
+
 Diana: pull out notes to elaborate on ideas for local tech startups
 
+
 Turn 8
+
 Alice loudly says at high1 to Charlie the bartender: Hey Charlie, my brainstorming session with Diana is going great! We're exploring some exciting ideas for local tech startups.
+
 Bob: pull out notes to continue brainstorming ideas for local tech startups
+
 Charlie the bartender: wiping down the bar with a white towel while maintaining eye contact with Alice
+
 Diana: I pull out my notes to elaborate on ideas for local tech startups, but then I decide that I need some fresh air and a quieter space to think.
 
+
 Turn 9
+
 Alice: get up from my high top seat
+
 Bob: pull out notes to continue brainstorming ideas for local tech startups
+
 Charlie the bartender: polish a glass with a white towel while maintaining eye contact with Alice
+
 Diana: excuse myself from the high1 table, allowing Alice to continue discussing with Charlie
 ```
 
@@ -317,23 +409,37 @@ But how would they react to danger? What about sudden, unexpected changes in the
 ```
 Turn 1
 Enter an event (or press Enter to continue, 'q' to quit): 
+
 Alice says at high1 to Charlie: Hi Charlie, I'm Alice. What's your favorite drink to make?
+
 Bob: take a sip of my drink and observe the scene at high1
+
 Charlie the bartender: pouring a drink
+
 Diana says at booth2 to Bob: Hey Bob, mind if I join you?
+
 
 Turn 2
 Enter an event (or press Enter to continue, 'q' to quit): A grizzly bear bursts into the bar, breaking through the window! It charges into the room and growls menacingly, swiping its massive claws that the patrons!
+
 Alice: stand up and try to distract the bear
+
 Bob: take a sip of my drink while observing the scene
+
 Charlie the bartender: tries to distract the grizzly bear with a loud, charismatic smile
+
 Diana: sitting down at booth1 to join Bob
+
 
 Turn 3
 Enter an event (or press Enter to continue, 'q' to quit): The grizzly bear claws Charlie and pushes him to the ground, mauling him!
+
 Alice loudly says at high1 to Charlie: Hey Charlie, are you okay after that bear attack? I'm happy to keep talking with you and distract you for a bit.
+
 Bob: Politely nod to Diana, acknowledging her presence
+
 Charlie the bartender says at bar to Alice: Hey Alice, I really appreciate your concern after that bear attack! How are you doing?
+
 Diana: rush to high1 to help Charlie, who was just mauled by a bear
 ```
 
@@ -350,9 +456,13 @@ Another memorable moment:
 ```
 Turn 2
 Enter an event (or press Enter to continue, 'q' to quit): A grizzly bear comes crashing through the wall and growls at everyone!
+
 Alice loudly says at high1 to Charlie: Hey Charlie, what do you think we should do about this grizzly bear?
+
 Bob loudly says at booth1 to Alice: Hey, have you given any thought to what we should do about the bear?
+
 Charlie the bartender loudly says at bar to group: Everyone, let's stay calm. We need to figure out a plan to safely handle this bear. Has anyone thought of calling wildlife experts or trying to escort it outside?
+
 Diana: stand up and quickly move towards the door, looking worried
 ```
 
